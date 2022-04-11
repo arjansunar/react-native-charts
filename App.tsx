@@ -4,6 +4,7 @@ import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Button, StyleSheet, View} from 'react-native';
 import {PieChart} from './src/components';
+import ProgressChart from './src/components/ProgressChart';
 
 // type Props = {};
 
@@ -18,6 +19,7 @@ const App = () => {
         <Stack.Screen name="Bar Chart" component={BarChart} />
         <Stack.Screen name="Pie Chart" component={PieChart} />
         <Stack.Screen name="Bezier Line" component={BezierLineChart} />
+        <Stack.Screen name="Progress Chart" component={ProgressChart} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -45,6 +47,11 @@ const Home = () => {
       <Button
         title={'Go to Bezier Line chart'}
         onPress={() => navigation.navigate('Bezier Line')}
+      />
+
+      <Button
+        title={'Go to Progress chart'}
+        onPress={() => navigation.navigate('Progress Chart')}
       />
     </View>
   );
