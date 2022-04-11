@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, ChartsBasic} from './src/components';
+import {BarChart, BezierLineChart, ChartsBasic} from './src/components';
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Button, StyleSheet, View} from 'react-native';
@@ -12,11 +12,12 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Pie Chart">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Basic" component={ChartsBasic} />
         <Stack.Screen name="Bar Chart" component={BarChart} />
         <Stack.Screen name="Pie Chart" component={PieChart} />
+        <Stack.Screen name="Bezier Line" component={BezierLineChart} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -40,6 +41,10 @@ const Home = () => {
       <Button
         title={'Go to Pie chart'}
         onPress={() => navigation.navigate('Pie Chart')}
+      />
+      <Button
+        title={'Go to Bezier Line chart'}
+        onPress={() => navigation.navigate('Bezier Line')}
       />
     </View>
   );

@@ -4,7 +4,7 @@ import {PieChart as RnPieChart} from 'react-native-chart-kit';
 
 type Props = {};
 
-const chartConfig = {
+export const chartConfig = {
   backgroundGradientFrom: '#1E2923',
   backgroundGradientFromOpacity: 0,
   backgroundGradientTo: '#08130D',
